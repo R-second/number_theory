@@ -10,7 +10,8 @@
 - リンクはこちら : [https://www.amazon.co.jp/はじめての数論-原著第3版-発見と証明の大航海%E2%80%90ピタゴラスの定理から楕円曲線まで-Joseph-Silverman/dp/462106620X](https://www.amazon.co.jp/はじめての数論-原著第3版-発見と証明の大航海%E2%80%90ピタゴラスの定理から楕円曲線まで-Joseph-Silverman/dp/462106620X)
 
 
-
+## 第1章
+[第1章の解説](ch01/explanation01.md) (未完成)
 
 
 
