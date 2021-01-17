@@ -1,0 +1,2 @@
+# markdownで吐き出されたpdfはいらない.
+*.pdf
