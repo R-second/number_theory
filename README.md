@@ -57,3 +57,6 @@
 - 練習問題11.8：[連立合同式を解く](ch11/sim_congruence.py)
 
 
+## 第12章 数の原子 -素数
+- 練習問題12.1：[Euclidの方法で素数のリスト{5}を増やす](ch12/prime_list_Euclid.py)
+

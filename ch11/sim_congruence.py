@@ -42,7 +42,6 @@ def linear_eq(a, b):
 # gcd(m, n) = 1
 def solve_sim_congruence(b, m, c, n):
     g, x, y = linear_eq(m, n)
-    print(x)
 
     y_1 = int( (c - b) * x )
 
@@ -59,5 +58,5 @@ def solve_sim_congruence(b, m, c, n):
 print( solve_sim_congruence(3, 7, 5, 9) )
 print( solve_sim_congruence(3, 37, 1, 87) )
 
-
+print( solve_sim_congruence(5, 3, 6, 4) )
 
