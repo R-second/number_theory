@@ -28,7 +28,7 @@ def factorization(n):
     while i <= limit:
         while n % i == 0:
             if i in decomp[0]:
-                decomp[1][decomp.index[i]] += 1
+                decomp[1][decomp[0].index(i)] += 1
             else:
                 decomp[0].append(i)
                 decomp[1].append(1)

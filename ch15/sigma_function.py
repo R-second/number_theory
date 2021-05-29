@@ -1,5 +1,5 @@
-## 練習問題11.4
-# オイラーの ファイ関数の値を返す
+### 練習問題15.6
+
 
 import math
 
@@ -46,26 +46,47 @@ def factorization(n):
 
 
 
-
-def phi(m):
-    decomp = factorization(m)
+# nの約数すべての和 sigma(n) を計算する
+def sigma(n):
+    decomp = factorization(n)
 
     result = 1
 
     for index, frac in enumerate(decomp[0]):
-        result *= (frac - 1) * frac ** (decomp[1][index] - 1)
+        result *=  (frac ** (decomp[1][index]+1) - 1) / (frac - 1)
 
-    return result
+    return int(result)
+
+
+# nまでの過剰数と不足数をカウント
+def count_sigma(n):
+    cnt_perfect = 0         # 完全数の数
+    cnt_surplus = 0         # 過剰数の数
+    cnt_deficiency = 0      # 不足数の数
+
+    for i in range(1, n+1):
+        if sigma(i) < 2*i:
+            cnt_deficiency += 1
+        elif sigma(i) > 2*i:
+            cnt_surplus += 1
+        else:
+            cnt_perfect += 1
+
+
+    return cnt_perfect, cnt_surplus, cnt_deficiency
+
 
 
 ## 実験
-print(phi(2401))  # 2058
-print(phi(225))   # 120
-print(phi(2))     # 1
-print(phi(1))
+print(sigma(10))
+print(sigma(20))
+print(sigma(1728))
 
 
+## (b)
+cnt_perfect, cnt_surplus, cnt_deficiency = count_sigma(100)
+print(f"100までの完全数 {cnt_perfect}個, 過剰数 {cnt_surplus}個, 不足数 {cnt_deficiency}個")
 
-
-
+cnt_perfect, cnt_surplus, cnt_deficiency = count_sigma(200)
+print(f"200までの完全数 {cnt_perfect}個, 過剰数 {cnt_surplus}個, 不足数 {cnt_deficiency}個")
 
