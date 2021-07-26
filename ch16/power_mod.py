@@ -6,7 +6,7 @@ def power_mod(a, k, m):
     while k >= 1:
         if k % 2 == 1:
             b = (a * b) % m
-        a = a * a
+        a = ( a * a ) % m
         k = int(k / 2)
     return b
 
